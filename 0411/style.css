@@ -1,0 +1,62 @@
+/* 選單樣式 */
+ul.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex; /* 讓選單項目橫向排列 */
+    gap: 30px; /* 項目之間的間距 */
+    background-color: #fefae0; /* 選單背景顏色 */
+}
+
+ul.menu > li {
+    margin: 0;
+}
+
+ul.menu > li > a {
+    text-decoration: none;
+    color: #3a5a40; /* 文字顏色 */
+    font-size: 30px; /* 文字大小 */
+    font-family: "微軟正黑體", Arial, sans-serif; /* 文字字型 */
+    padding: 10px 15px;
+    height: 50px; /* 選項高度 */
+    display: flex;
+    align-items: center; /* 垂直置中 */
+    border-radius: 5px;
+    transition: color 0.3s; /* 平滑過渡效果 */
+}
+
+ul.menu > li > a:hover {
+    color: #588157; /* 滑鼠移動到上面時的文字顏色 */
+}
+
+/* 子選單樣式 */
+ul.submenu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: none; /* 預設隱藏子選單 */
+    position: absolute;
+    background-color: #fefae0;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+ul.menu > li:hover > ul.submenu {
+    display: block; /* 滑鼠移到父選單時顯示子選單 */
+}
+
+ul.submenu > li > a {
+    color: #3a5a40;
+    font-size: 20px;
+    padding: 10px 15px;
+    display: block;
+    text-decoration: none;
+}
+
+ul.submenu > li > a:hover {
+    color: #588157;
+    background-color: #ddd;
+}
